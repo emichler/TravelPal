@@ -1,46 +1,85 @@
-
-body {
-  font-family: Arial, sans-serif;
+/* Reset and base styling */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.75;
+  padding-top: 60px; /* account for sticky nav */
+}
+
+/* Navigation styles */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1e1e2f;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
-  background-color: #333;
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   justify-content: center;
-}
-
-nav ul li {
+  padding: 0;
   margin: 0;
 }
 
 nav ul li a {
   display: block;
-  padding: 15px 20px;
+  padding: 16px 24px;
   color: #fff;
   text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-  background-color: #575757;
+  background-color: #4c4c6d;
+  color: #ffd369;
 }
 
+/* Section styling */
 section {
-  padding: 20px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+/* Gallery styles */
 .gallery {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .gallery img {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Utility classes */
+h1, h2, h3 {
+  color: #1e1e2f;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 16px;
 }
